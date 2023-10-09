@@ -9,8 +9,8 @@ import '@/styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Breadit',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'CoummunityHub',
+  description: "CoummunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
 }
 
 export default function RootLayout({

@@ -40,22 +40,27 @@ const Post: FC<PostProps> = ({
         />
 
         <div className='w-0 flex-1'>
-          <div className='max-h-40 mt-1 text-xs text-gray-500'>
+          <div className='max-h-40 mt-1 text-xs text-slate-700'>
+          <div className="flex justify-between w-full">
+          <span className='max-h-40 truncate text-xs text-slate-700'>
             {subredditName ? (
               <>
                 <a
                   className='underline text-zinc-900 text-sm underline-offset-2'
                   href={`/r/${subredditName}`}>
-                  r/{subredditName}
+                  {subredditName}
                 </a>
                 <span className='px-1'>•</span>
               </>
             ) : null}
-            <span>Posted by {post.author.username}</span>{' '}
-            {formatTimeToNow(new Date(post.createdAt))}
+
+            Posted by {post.author.username}{' '}</span>
+            <span className="tag">{formatTimeToNow(new Date(post.createdAt))}</span>          
+          </div>
+
           </div>
           <a href={`/r/${subredditName}/post/${post.id}`}>
-            <h1 className='text-lg font-semibold py-2 leading-6 text-gray-900'>
+            <h1 className='text-lg font-semibold py-2 leading-6 text-slate-900'>
               {post.title}
             </h1>
           </a>

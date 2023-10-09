@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Icons } from "../Icons";
-import { buttonVariants } from "../ui/Button";
+import Image from 'next/image'
 import { getAuthSession } from "@/lib/auth";
 import UserAccount from "./UserAccount";
 
@@ -12,9 +11,16 @@ const Navbar = async () => {
 			<div className="container max-w-7xl h-full mx-auto flex items-center justify-between gap-2">
 				{/* logo */}
 				<Link href={"/"} className="flex gap-2 items-center">
-					<Icons.logo className="h-8 w-8 sm:h-6 sm:w-6" />
+					<Image 
+						src="/images/logo.png"
+						alt="logo"
+						width={50}
+						height={50}
+						className="mx-auto h-8 w-8"
+
+						/>
 					<p className="hidden text-zinc-700 text-sm font-medium md:block">
-						Breadit
+						CommunityHub
 					</p>
 				</Link>
 
@@ -25,7 +31,7 @@ const Navbar = async () => {
 				{session?.user ? (
 					<UserAccount user={session.user} />
 				) : (
-					<Link href={"/sign-in"} className={buttonVariants()}>
+					<Link href={"/sign-in"} className="w-[100px]">
 						Sign In
 					</Link>
 				)}
