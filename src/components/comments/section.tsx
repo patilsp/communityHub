@@ -71,7 +71,6 @@ const CommentsSection = async ({ postId }: CommentsSectionProps) => {
 													postId={postId}
 													currentVote={replyVote}
 													votesAmt={replyVotesAmt}
-													isSubComment={true}
 												/>
 											</div>
 										);
