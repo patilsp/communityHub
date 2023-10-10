@@ -60,7 +60,7 @@ const Page = () => {
 
   return (
     <div className='container flex items-center h-full max-w-3xl mx-auto'>
-      <div className='relative bg-white w-full h-fit p-4 rounded-lg space-y-6'>
+      <div className='relative bg-white w-full h-fit p-4 rounded-lg space-y-6 border'>
         <div className='flex justify-between items-center'>
           <h1 className='text-xl font-semibold'>Create a Community</h1>
         </div>
@@ -68,13 +68,13 @@ const Page = () => {
         <hr className='bg-red-500 h-px' />
 
         <div>
-          <p className='text-lg font-medium'>Name</p>
-          <p className='text-xs pb-2'>
+          <h1 className='h1 text-lg font-medium mb-1'>Name</h1>
+          <p className='text-zinc-500 text-xs pb-2 mb-2'>
             Community names including capitalization cannot be changed.
           </p>
           <div className='relative'>
             <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400'>
-              r/
+              <span class="text-xs pr-2">⌘</span>
             </p>
             <Input
               value={input}

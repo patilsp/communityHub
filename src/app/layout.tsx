@@ -9,8 +9,8 @@ import '@/styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'CoummunityHub',
-  description: "CoummunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
+  title: 'CommunityHub',
+  description: "CommunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
 }
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
           <Navbar />
           {authModal}
 
-          <div className='container max-w-7xl mx-auto h-full pt-12'>
+          <div className='container max-w-7xl mx-auto h-full pt-10'>
             {children}
           </div>
         </Providers>

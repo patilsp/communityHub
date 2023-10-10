@@ -15,7 +15,8 @@ export function UserAvatar({ user, ...props }: UserAvatarProps) {
       {user.image ? (
         <div className='relative aspect-square h-full w-full'>
           <Image
-            fill
+            width={40}
+						height={40}
             src={user.image}
             alt='profile picture'
             referrerPolicy='no-referrer'

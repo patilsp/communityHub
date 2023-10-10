@@ -27,7 +27,7 @@ const page = async ({ params }: pageProps) => {
             Create Post
           </h3>
           <p className='ml-2 mt-1 truncate text-sm text-gray-500'>
-            in r/{params.slug}
+            in {params.slug} Community
           </p>
         </div>
       </div>

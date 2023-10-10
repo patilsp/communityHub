@@ -10,8 +10,8 @@ import { notFound } from 'next/navigation'
 import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Breadit',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'CoummunityHub',
+  description: "CoummunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
 }
 
 const Layout = async ({
@@ -70,7 +70,7 @@ const Layout = async ({
 
           {/* info sidebar */}
           <div className='overflow-hidden h-fit rounded-lg border border-gray-200 order-first md:order-last'>
-            <div className='px-6 py-4'>
+            <div className='bg-green-300 px-4 py-2'>
               <p className='font-semibold py-3'>About {subreddit.name}</p>
             </div>
             <dl className='divide-y divide-gray-100 px-6 py-4 text-sm leading-6 bg-white'>
@@ -106,7 +106,7 @@ const Layout = async ({
                   variant: 'outline',
                   className: 'w-full mb-6',
                 })}
-                href={`r/${slug}/submit`}>
+                href={`${slug}/submit`}>
                 Create Post
               </Link>
             </dl>

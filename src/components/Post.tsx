@@ -2,7 +2,7 @@
 
 import { formatTimeToNow } from '@/lib/utils'
 import { Post, User, Vote } from '@prisma/client'
-import { MessageSquare } from 'lucide-react'
+import { MessageSquare, Share,  MoreHorizontal } from 'lucide-react'
 import Link from 'next/link'
 import { FC, useRef } from 'react'
 import EditorOutput from './EditorOutput'
@@ -31,8 +31,8 @@ const Post: FC<PostProps> = ({
   const pRef = useRef<HTMLParagraphElement>(null)
 
   return (
-    <div className='rounded-md bg-white shadow'>
-      <div className='px-6 py-4 flex justify-between'>
+    <div className='rounded-md bg-white shadow border'>
+      <div className='px-3 py-2 flex justify-between'>
         <PostVoteClient
           postId={post.id}
           initialVotesAmt={_votesAmt}
@@ -42,11 +42,11 @@ const Post: FC<PostProps> = ({
         <div className='w-0 flex-1'>
           <div className='max-h-40 mt-1 text-xs text-slate-700'>
           <div className="flex justify-between w-full">
-          <span className='max-h-40 truncate text-xs text-slate-700'>
+          <span className='max-h-40 truncate text-xs text-slate-900 text-semibold '>
             {subredditName ? (
               <>
                 <a
-                  className='underline text-zinc-900 text-sm underline-offset-2'
+                  className='underline text-blue-700 text-semibold text-sm underline-offset-2'
                   href={`/r/${subredditName}`}>
                   {subredditName}
                 </a>
@@ -77,12 +77,22 @@ const Post: FC<PostProps> = ({
         </div>
       </div>
 
-      <div className='bg-gray-50 z-20 text-sm px-4 py-4 sm:px-6'>
+      <div className='flex justify-between bg-gray-100 m-2 gap-2 rounded-md z-20 text-sm px-4 py-4 sm:px-6'>
         <Link
           href={`/r/${subredditName}/post/${post.id}`}
           className='w-fit flex items-center gap-2'>
           <MessageSquare className='h-4 w-4' /> {commentAmt} comments
         </Link>
+        <Link
+          href={`/r/${subredditName}/post/${post.id}`}
+          className='w-fit flex items-center gap-2'>
+          <Share className='h-4 w-4' /> Share
+        </Link>
+        <Link
+          href={`/r/${subredditName}/post/${post.id}`}
+          className='w-fit flex items-center gap-2'>
+          <MoreHorizontal className='h-4 w-4' /> 
+        </Link>        
       </div>
     </div>
   )
