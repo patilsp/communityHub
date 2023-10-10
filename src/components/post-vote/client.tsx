@@ -88,7 +88,7 @@ const PostVoteClient: React.FC<PostVoteClientProps> = ({
 	});
 
 	return (
-		<div className="flex flex-row sm:flex-col gap-2 sm:gap-0 sm:w-20 pb-4 sm:pb-0 pr-3 sm:pr-6">
+		<div className="flex flex-row sm:flex-col gap-2 sm:gap-0 sm:w-16 pb-4 sm:pb-0 pr-3 sm:pr-6">
 			<Button
 				onClick={() => {
 					vote({
@@ -101,8 +101,8 @@ const PostVoteClient: React.FC<PostVoteClientProps> = ({
 				disabled={isLoading}
 			>
 				<ArrowBigUp
-					className={cn("h-5 w-5 text-zinc-700", {
-						"text-emerald-500 fill-emerald-500": currentVote === "UP",
+					className={cn("h-4 w-4 text-zinc-900", {
+						"text-emerald-600 fill-emerald-600": currentVote === "UP",
 					})}
 				/>
 			</Button>
@@ -123,8 +123,8 @@ const PostVoteClient: React.FC<PostVoteClientProps> = ({
 				disabled={isLoading}
 			>
 				<ArrowBigDown
-					className={cn("h-5 w-5 text-zinc-700", {
-						"text-red-500 fill-red-500": currentVote === "DOWN",
+					className={cn("h-4 w-4 text-zinc-900", {
+						"text-red-600 fill-red-600": currentVote === "DOWN",
 					})}
 				/>
 			</Button>

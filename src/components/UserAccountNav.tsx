@@ -10,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuShortcut,
 } from '@/components/ui/DropdownMenu'
 import { UserAvatar } from '@/components/UserAvatar'
 
@@ -39,15 +40,28 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href='/'>Feed</Link>
+          <Link href='/'>
+      
+          Create Post
+          <DropdownMenuShortcut>⌘F</DropdownMenuShortcut>
+          </Link>         
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href='/r/create'>Create Community</Link>
+          <Link href='/r/create'>Create Community
+          <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href='/changeavatar'>Change Avatar
+          <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
+          </Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href='/settings'>Settings</Link>
+          <Link href='/settings'>Settings
+          <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+          </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
@@ -59,6 +73,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
             })
           }}>
           Sign out
+          <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

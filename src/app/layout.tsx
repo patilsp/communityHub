@@ -8,9 +8,23 @@ import '@/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'CommunityHub',
-  description: "CommunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
+export const metadata: Metadata = {
+  title: {
+    title: 'CommunityHub',
+    description: "CommunityHub is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in",
+  },
+  keywords: [
+    "Next.js blog",
+    "React blog",
+    "Tailwind CSS blog",
+    "Developer blog",
+    "Radix UI",
+  ],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
@@ -27,12 +41,10 @@ export default function RootLayout({
         'bg-white text-slate-900 antialiased light',
         inter.className
       )}>
-      <body className='min-h-screen pt-12 bg-slate-50 antialiased'>
+      <body className='min-h-screen pt-10 bg-slate-50 antialiased'>
         <Providers>
-          {/* @ts-expect-error Server Component */}
           <Navbar />
           {authModal}
-
           <div className='p-4 max-w-7xl mx-auto h-full pt-10'>
             {children}
           </div>

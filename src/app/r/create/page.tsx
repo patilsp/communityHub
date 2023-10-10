@@ -69,12 +69,12 @@ const Page = () => {
 
         <div>
           <h1 className='h1 text-lg font-medium mb-1'>Name</h1>
-          <p className='text-zinc-500 text-xs pb-2 mb-2'>
+          <p className='text-zinc-700  pb-2 mb-2'>
             Community names including capitalization cannot be changed.
           </p>
           <div className='relative'>
             <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400'>
-              <span class="text-xs pr-2">⌘</span>
+              <span class="text-xs px-2">⌘</span>
             </p>
             <Input
               value={input}

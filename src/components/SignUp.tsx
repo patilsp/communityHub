@@ -16,16 +16,18 @@ const SignUp = () => {
           />
         <h1 className='text-2xl font-semibold tracking-tight'>Sign Up</h1>
         <p className='text-sm max-w-xs mx-auto'>
-          By continuing, you are setting up a CoummunityHub account and agree to our
+          By continuing, you are setting up a CommunityHub account and agree to our
           User Agreement and Privacy Policy.
         </p>
       </div>
-      <UserAuthForm />
+      <div className='px-4 py-4'>
+          <UserAuthForm />
+      </div>
       <p className='px-8 text-center text-sm text-muted-foreground'>
-        Already a CoummunityHub?{' '}
+        Already a CommunityHub?{' '}
         <Link
           href='/sign-in'
-          className='hover:text-brand text-sm underline underline-offset-4'>
+          className='hover:text-brand text-sm underline underline-offset-4 pr-4'>
           Sign in
         </Link>
       </p>
