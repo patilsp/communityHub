@@ -65,3 +65,34 @@
   @apply inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs text-[10px] transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground;
 }
 
+
+.h1 {
+	display: inline-block;
+	background-image: linear-gradient(90deg, #7ed56f, #28b485);
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: 1px;
+	transition: all .2s;
+}
+
+.border1{
+  --tw-border-opacity: 1;
+    border-color: rgb(126 34 206/var(--tw-border-opacity));
+}
+.btn-primary{
+ @apply  active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 bg-zinc-900 text-zinc-100 hover:bg-zinc-800 py-2 px-4 ;
+}
+
+.navbar{
+  position: fixed;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.8;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
