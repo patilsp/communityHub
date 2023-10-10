@@ -5,12 +5,17 @@ import type { NextRequest } from 'next/server'
 export async function middleware(req: NextRequest) {
   const token = await getToken({ req })
 
-  // if (!token) {
-  //   return NextResponse.redirect(new URL('/sign-in', req.nextUrl))
-  // }
+  if (!token) {
+    // Redirect to the sign-in page with the appropriate query parameters
+    return NextResponse.redirect(`/sign-in?redirect=${encodeURIComponent(req.url)}`)
+  }
+
+  // Continue processing the request
+  return NextResponse.next()
 }
 
-// See "Matching Paths" below to learn more
+// Define the routes that should use the middleware
 export const config = {
-  matcher: ['/r/:path*/submit', '/r/create'],
+  middleware: 'auth', // Use a custom name for your middleware
+  pages: ['/r/:path*/submit', '/r/create'], // Specify the protected routes
 }
